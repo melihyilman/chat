@@ -4,7 +4,7 @@ const socket = require("socket.io");
 var app = express();
 
 var server = app.listen(process.env.PORT || 3000, function () {
-  console.log("Listening to Port 3000");
+  console.log(`Listening to Port ${process.env.PORT}`);
 });
 
 app.use(express.static("public"));
