@@ -3,7 +3,7 @@ const socket = require("socket.io");
 
 var app = express();
 
-var server = app.listen(3000, function () {
+var server = app.listen(process.env.PORT || 3000, function () {
   console.log("Listening to Port 3000");
 });
 
@@ -17,3 +17,4 @@ upgradedServer.on("connection", function (socket) {
   });
   console.log("Websocket Connected", socket.id);
 });
+//test
